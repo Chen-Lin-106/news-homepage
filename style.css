@@ -132,6 +132,11 @@ header .header_wrapper nav a:hover {
   margin: 30px 0;
 }
 
+.hero_wrapper #desktop_img {
+  margin: 30px 0;
+  display: none;
+}
+
 main h1 {
   font-size: 40px;
   font-weight: var(--font-w800);
@@ -270,14 +275,12 @@ main .readmore_wrapper a:hover {
   body {
     width: 100vh;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
   }
 
   .wrapper {
     display: grid;
+    gap: 10px;
     grid-template-areas:
       "header header header"
       "hero hero news"
@@ -293,12 +296,11 @@ main .readmore_wrapper a:hover {
     grid-area: hero;
     width: 600px;
     height: 200px;
-    margin-top: 70px;
-    border: solid 1px blue;
+    margin-top: 40px;
   }
 
   .hero_wrapper img {
-    width:100%;
+    width: 100%;
     height: 300px;
   }
 
@@ -306,7 +308,8 @@ main .readmore_wrapper a:hover {
     grid-area: main;
     display: flex;
     flex-direction: row;
-    padding-top: 63px;
+    justify-content: center;
+    align-items: center;
     height: 250px;
   }
 
@@ -330,5 +333,18 @@ main .readmore_wrapper a:hover {
     display: flex;
     justify-content: space-evenly;
     width: 500px;
+  }
+
+  .hero_wrapper #mobile_img {
+    display: none;
+  }
+
+  .hero_wrapper #desktop_img {
+    margin: 30px 0;
+    display: block;
+  }
+
+  main h1 {
+    font-size: 35px;
   }
 }
